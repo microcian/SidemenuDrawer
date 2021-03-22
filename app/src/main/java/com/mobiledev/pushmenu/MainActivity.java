@@ -24,7 +24,8 @@ import com.mobiledev.pushmenu.fragments.FragmentSettings;
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener, FragmentDrawer.SlideListener{
 
     private static String TAG = MainActivity.class.getSimpleName();
-     private Toolbar mToolbar;
+
+    private Toolbar mToolbar;
     private FragmentDrawer drawerFragment;
     private LinearLayout mMainContainer;
     private float lastTranslate = 0.0f;
