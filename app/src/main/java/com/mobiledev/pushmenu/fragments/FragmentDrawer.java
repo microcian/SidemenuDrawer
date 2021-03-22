@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
+import androidx.databinding.DataBindingUtil;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -21,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.mobiledev.pushmenu.R;
 import com.mobiledev.pushmenu.adapter.NavigationDrawerAdapter;
+import com.mobiledev.pushmenu.databinding.FragmentNavigationDrawerBinding;
 import com.mobiledev.pushmenu.model.NavDrawerItem;
 
 import java.util.ArrayList;
@@ -79,8 +81,13 @@ public class FragmentDrawer extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        FragmentNavigationDrawerBinding binding = DataBindingUtil.inflate(
+                inflater, R.layout.fragment_navigation_drawer, container, false);
+        layout = binding.getRoot();
+
         // Inflating view layout
-        layout = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+//        layout = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
         recyclerView = (RecyclerView) layout.findViewById(R.id.drawerList);
 
         adapter = new NavigationDrawerAdapter(getActivity(), getData());
