@@ -1,10 +1,11 @@
 package com.mobiledev.pushmenu.fragments;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
 
 import com.mobiledev.pushmenu.MainActivity;
 import com.mobiledev.pushmenu.R;
@@ -13,7 +14,7 @@ import com.mobiledev.pushmenu.R;
 /**
  * Created by Manu on 9/24/2016.
  */
-public class FragmentSentItems extends Fragment{
+public class FragmentSentItems extends Fragment {
     MainActivity mActivity;
     @Override
     public void onCreate(Bundle savedInstanceState) {
