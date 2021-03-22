@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mToolbar =  findViewById(R.id.toolbar);
+        mToolbar =  findViewById(R.id.include_toolbar);
          setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         mMainContainer =  findViewById(R.id.mainContainer);
